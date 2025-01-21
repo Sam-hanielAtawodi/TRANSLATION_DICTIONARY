@@ -93,6 +93,30 @@ yoruba_dictionary = {
     'aja': "dog",
 }
 
+nupe_dictionary = {
+    'dzuko': "market",
+    'be': "come",
+    'emi': "home",
+    'ede': "cloth",
+    'ebi': "knife",
+    'esa': "chair",
+    'bichi': "leg",
+    'soku': "broom",
+    'layam': "give me",
+    'ewugi': "spoon",
+    'kubelazi': "good_morning",
+    'kubegidi': "good_afternoon",
+    'yeshi': "night",
+    'azo': "beans",
+    'asibiti': "hospital",
+    'pati': "mountain",
+    'misu': "mouth",
+    'egwalo': "right_hand",
+    'eyi': "guinea_corn",
+    'kubelozu': "good_evening"
+
+}
+
 def search(word):
     if word in igbo_dictionary:
         result.set(igbo_dictionary[word])
@@ -109,10 +133,10 @@ def search(word):
             print("Not found")
             translation.set("Word not found")
 
-    elif language == "spanish":
-        if word in spanish_dictionary:
-            print(spanish_dictionary[word])
-            translation.set(spanish_dictionary[word])
+    elif language == "nupe":
+        if word in nupe_dictionary:
+            print(nupe_dictionary[word])
+            translation.set(nupe_dictionary[word])
         else:
             print("Not found")
             translation.set("Word not found")
@@ -140,8 +164,8 @@ button_frame = tk.Frame(root)
 yoruba_button = tk.Button(button_frame, text="Yoruba", width=40, pady=10, command=lambda:handle_navigate_forward("yoruba"))
 spanish_button = tk.Button(button_frame, text="Spanish", width=40, pady=10, command=lambda:handle_navigate_forward("spanish"))
 igbo_button = tk.Button(button_frame,text="Igbo", width=40, pady=10, command=lambda:handle_navigate_forward("igbo"))
-italian_button = tk.Button(button_frame, text="French", width=40, pady=10, command=lambda:handle_navigate_forward("French"))
-german_button = tk.Button(button_frame, text="Nupe", width=40, pady=10, command=lambda:handle_navigate_forward("Nupe"))
+french_button = tk.Button(button_frame, text="French", width=40, pady=10, command=lambda:handle_navigate_forward("French"))
+nupe_button = tk.Button(button_frame, text="Nupe", width=40, pady=10, command=lambda:handle_navigate_forward("Nupe"))
 
 
 translation = tk.StringVar()
