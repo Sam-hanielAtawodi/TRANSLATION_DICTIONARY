@@ -7,7 +7,6 @@ window.title("The General Dictionary")
 def pack_first_page():
     button_frame.pack()
     yoruba_button.pack()
-    spanish_button.pack()
     igbo_button.pack()
     french_button.pack()
     nupe_button.pack()
@@ -117,6 +116,30 @@ nupe_dictionary = {
 
 }
 
+French_dictionary = {
+    'bonjour': "Good Morning",
+    'merci': "Thank you",
+    'qui': "Yes",
+    'non': "No",
+    'excuse-moi': "Excuse me",
+    'pardon': "Sorry",
+    'comment': "How",
+    'pourquol': "Why",
+    'quand': "When",
+    'qui': "Who",
+    'je': "I",
+    'tu': "You",
+    'il': "He",
+    'elle': "She",
+    'nous': "We",
+    'et': "And",
+    'bon': "Good",
+    'chaud': "Hot",
+    'froid': "Cold",
+    'bonsoir': "Good evening"
+
+}
+
 def search(word):
     if word in igbo_dictionary:
         result.set(igbo_dictionary[word])
@@ -141,28 +164,19 @@ def search(word):
             print("Not found")
             translation.set("Word not found")
 
-    elif language == "spanish":
-        if word in spanish_dictionary:
-            print(spanish_dictionary[word])
-            translation.set(spanish_dictionary[word])
+    elif language == "french":
+        if word in french_dictionary:
+            print(french_dictionary[word])
+            translation.set(french_dictionary[word])
         else:
             print("Not found")
             translation.set("Word not found")
-
-    elif language == "spanish":
-        if word in spanish_dictionary:
-            print(spanish_dictionary[word])
-            translation.set(spanish_dictionary[word])
-        else:
-            print("Not found")
-            translation.set("Word not found" )
 
 heading = tk.Label(root, text="Welcome to the Multi-language dictionary", font=("Times new roman", 30), pady=30)
 sub_heading = tk.Label(root, text="Select a language to translate", font=("Times new roman", 25), pady=15)
 
 button_frame = tk.Frame(root)
 yoruba_button = tk.Button(button_frame, text="Yoruba", width=40, pady=10, command=lambda:handle_navigate_forward("yoruba"))
-spanish_button = tk.Button(button_frame, text="Spanish", width=40, pady=10, command=lambda:handle_navigate_forward("spanish"))
 igbo_button = tk.Button(button_frame,text="Igbo", width=40, pady=10, command=lambda:handle_navigate_forward("igbo"))
 french_button = tk.Button(button_frame, text="French", width=40, pady=10, command=lambda:handle_navigate_forward("French"))
 nupe_button = tk.Button(button_frame, text="Nupe", width=40, pady=10, command=lambda:handle_navigate_forward("Nupe"))
