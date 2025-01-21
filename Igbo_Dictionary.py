@@ -1,7 +1,7 @@
 from tkinter import Tk, Entry, Button, Label, StringVar
 window = Tk()
 window.geometry("500x500")
-window.title("The Igbo Dictionary")
+window.title("The General Dictionary")
 
 
 def pack_first_page():
@@ -70,6 +70,29 @@ igbo_dictionary = {
 
 }
 
+yoruba_dictionary = {
+    'owo': "hand",
+    'oju': "eye",
+    'ati': "ear",
+    'ori': "head",
+    'ajika': "shoulder",
+    'wa': "come",
+    'gba': "take",
+    'ese': "leg",
+    'enu': "mouth",
+    'sara': "run",
+    'jada': "out",
+    'odabor': "goodbye",
+    'maji': "two",
+    'metar': "three",
+    'shibi': "spoon",
+    'abour': "plate",
+    'omi': "water",
+    'oko': "dick",
+    'ojen': "food",
+    'aja': "dog",
+}
+
 def search(word):
     if word in igbo_dictionary:
         result.set(igbo_dictionary[word])
@@ -78,10 +101,10 @@ def search(word):
     else:
         result.set("Not found")
 
-    elif language == "spanish":
-        if word in spanish_dictionary:
-            print(spanish_dictionary[word])
-            translation.set(spanish_dictionary[word])
+    elif language == "yoruba":
+        if word in yoruba_dictionary:
+            print(yoruba_dictionary[word])
+            translation.set(yoruba_dictionary[word])
         else:
             print("Not found")
             translation.set("Word not found")
@@ -120,7 +143,7 @@ igbo_button = tk.Button(button_frame,text="Igbo", width=40, pady=10, command=lam
 italian_button = tk.Button(button_frame, text="French", width=40, pady=10, command=lambda:handle_navigate_forward("French"))
 german_button = tk.Button(button_frame, text="Nupe", width=40, pady=10, command=lambda:handle_navigate_forward("Nupe"))
 
-mb
+
 translation = tk.StringVar()
 translation_frame = tk.Frame(root)
 word_entry = tk.Entry(translation_frame, width=40, font=("Arial", 20))
@@ -131,4 +154,4 @@ back_button = tk.Button(translation_frame, text="Back", width=40, pady=10, comma
 heading.pack()
 pack_first_page()
 
-window.mainloop() igbo dictionary
+window.mainloop() 
