@@ -120,7 +120,7 @@ igbo_button = tk.Button(button_frame,text="Igbo", width=40, pady=10, command=lam
 italian_button = tk.Button(button_frame, text="French", width=40, pady=10, command=lambda:handle_navigate_forward("French"))
 german_button = tk.Button(button_frame, text="Nupe", width=40, pady=10, command=lambda:handle_navigate_forward("Nupe"))
 
-
+mb
 translation = tk.StringVar()
 translation_frame = tk.Frame(root)
 word_entry = tk.Entry(translation_frame, width=40, font=("Arial", 20))
